@@ -70,7 +70,7 @@
 
 \newcommand{\emailsymbol}{\faAt}
 \newcommand{\phonesymbol}{\faPhone}
-\newcommand{\homepagesymbol}{\faChain}
+\newcommand{\homepagesymbol}{\faGlobe}
 \newcommand{\locationsymbol}{\faMapMarker}
 \newcommand{\linkedinsymbol}{\faLinkedin}
 \newcommand{\twittersymbol}{\faTwitter}
