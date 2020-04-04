@@ -3,8 +3,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[default]{lato}
-\usepackage[pdfborder={0 0 0.1}]{hyperref}
+\usepackage[pdfborder={0 0 0.1},allbordercolors={0.95 0.95 0.9}]{hyperref}
 \usepackage{ragged2e}
+\usepackage{fontawesome}
 
 \geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
 
@@ -38,6 +39,7 @@
 % \definecolor{EmphasisColor}{HTML}{2E2E2E}
 % \definecolor{BodyColor}{HTML}{666666}
 
+\colorlet{links}{EmphasisColor!60}
 \colorlet{heading}{MainColor}
 \colorlet{accent}{AccentColor}
 \colorlet{emphasis}{EmphasisColor}
@@ -45,6 +47,15 @@
 
 \renewcommand{\itemmarker}{{\small\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
+
+\hypersetup{
+    colorlinks,
+    linkcolor={MainColor!50!black},
+    citecolor={MainColor!50!black},
+    urlcolor={MainColor!50!black}
+}
+
+\newcommand\externalLink{\textcolor{links}{\textsuperscript{\faExternalLink}}}
 
 \begin{document}
 
@@ -68,7 +79,7 @@
 
 \cvsection[sidebar]{Experience}
 
-\cvevent{Researcher}{\href{https://www.tacoma.uw.edu/}{University of Washington, Tacoma}}{Jan 2020 -- Present}{Tacoma, WA}
+\cvevent{Researcher}{\href{https://www.tacoma.uw.edu/}{University of Washington, Tacoma \externalLink}}{Jan 2020 -- Present}{Tacoma, WA}
 \begin{itemize}
 \item \justifying Member of the Cloud and Distributed Systems (CDS) Research Lab
 \item \justifying Working on a project to evaluate the performance of \href{https://firecracker-microvm.github.io/}{Firecracker}
@@ -84,16 +95,16 @@
 
 \divider
 
-\cvevent{Coding Bootcamp}{\href{https://www.appacademy.io/}{AppAcademy}}{May 2019 -- Dec 2019}{San Francisco, CA}
+\cvevent{Coding Bootcamp}{\href{https://www.appacademy.io/}{AppAcademy \externalLink}}{May 2019 -- Dec 2019}{San Francisco, CA}
 \begin{itemize}
-\item \justifying Accepted into one of the nation's \href{https://www.switchup.org/bootcamps/app-academy}{best coding bootcamps} having \href{https://www.quora.com/How-hard-is-it-to-get-into-App-Academy}{one of the lowest acceptance rates}.
+\item \justifying Accepted into one of the nation's \href{https://www.switchup.org/bootcamps/app-academy}{best coding bootcamps \externalLink} having \href{https://www.coursereport.com/blog/interview-with-kush-patel-founder-of-app-academy}{one of the lowest acceptance rates \externalLink}.
 \item \justifying Did multiple cycles of coding projects with tight deadlines
 \item \justifying Practiced teamwork, pair programming, agile development and cutting edge technologies
 \end{itemize}
 
 \divider
 
-\cvevent{Data Analyst \& Java Developer}{Amir Teb Bita}{Feb 2012 -- Mar 2014}{Amol, Iran}
+\cvevent{Data Analyst \& Java Developer}{\href{http://parscenter.com/amirtebbita}{Amir Teb Bita \externalLink}}{Feb 2012 -- Mar 2014}{Amol, Iran}
 \begin{itemize}
 \item \justifying Implemented an application to collect measurement metrics from lab equipment.
 \item \justifying Implemented a statistical model for recalibration of lab equipment, increasing equipment accuracy by 12\% across the board.
@@ -110,11 +121,11 @@
 
 \wheelchart{1.5cm}{0.5cm}{
   25/10em/accent!10/\footnotesize\\[1ex]Sleeping \& dreaming about the last thing I read,
-  5/9em/accent!20/\footnotesize\\[1ex]Non-technical study,
+  5/9em/heading!20/\footnotesize\\[1ex]Non-technical study,
   30/9em/accent!80/\footnotesize\\[1ex]Communicating with teammates,
-  10/9em/accent!50/\footnotesize\\[1ex]Going on coding quests!,
+  10/9em/heading!50/\footnotesize\\[1ex]Going on coding quests!,
   5/13em/accent!10/\footnotesize\\[1ex]Exercising,
-  10/15em/accent!70/\footnotesize\\[1ex]Personal adventures,
+  10/15em/heading!70/\footnotesize\\[1ex]Personal adventures,
   15/9em/accent!30/\footnotesize\\[1ex]Spending time with family and cooking
 }
 
